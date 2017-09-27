@@ -88,7 +88,12 @@ and run
 ### Use Docker
 
 As an alternative, the repository contains a `Dockerfile` and a `docker-compose.yml`. When you have installed [Docker](https://www.docker.com/)
-you can just run
+you prepare with
+
+    $ docker-compose build
+    $ docker-compose run app cesk install
+
+After that, you can execute the tests with
 
     $ docker-compose up
 
