@@ -63,6 +63,13 @@
    "contract: "
    '(("app/concepts/" "/concepts/\\(.+/contract/.+\\)\\.rb$"))))
 
+(defun projectile-trailblazer-find-operation ()
+  "Find a operation."
+  (interactive)
+  (projectile-rails-find-resource
+   "operation: "
+   '(("app/concepts/" "/concepts/\\(.+/operation/.+\\)\\.rb$"))))
+
 ;;;###autoload
 (define-minor-mode projectile-trailblazer-mode
   "Rails trailblazer mode based on projectile-rails"
