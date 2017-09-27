@@ -6,6 +6,6 @@ Background:
   And file "app/concepts/user/operation/edit.rb" exists
   And I turn on projectile-trailblazer-mode
 
-Scenario: Finding user cell
+Scenario: Finding user operation
   When I run command "projectile-trailblazer-find-operation" selecting "user/operation/create"
   Then I am in file "app/concepts/user/operation/create.rb"

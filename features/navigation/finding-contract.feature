@@ -6,6 +6,6 @@ Background:
   And file "app/concepts/user/contract/edit.rb" exists
   And I turn on projectile-trailblazer-mode
 
-Scenario: Finding user cell
+Scenario: Finding user contract
   When I run command "projectile-trailblazer-find-contract" selecting "user/contract/create"
   Then I am in file "app/concepts/user/contract/create.rb"
