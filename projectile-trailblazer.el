@@ -56,6 +56,13 @@
    "cell: "
    '(("app/concepts/" "/concepts/\\(.+/cell/.+\\)\\.rb$"))))
 
+(defun projectile-trailblazer-find-contract ()
+  "Find a contract."
+  (interactive)
+  (projectile-rails-find-resource
+   "contract: "
+   '(("app/concepts/" "/concepts/\\(.+/contract/.+\\)\\.rb$"))))
+
 ;;;###autoload
 (define-minor-mode projectile-trailblazer-mode
   "Rails trailblazer mode based on projectile-rails"
