@@ -49,6 +49,13 @@
   :prefix "projectile-trailblazer-"
   :group 'projectile)
 
+(defun projectile-trailblazer-find-cell ()
+  "Find a cell."
+  (interactive)
+  (projectile-rails-find-resource
+   "cell: "
+   '(("app/concepts/" "/concepts/\\(.+/cell/.+\\)\\.rb$"))))
+
 ;;;###autoload
 (define-minor-mode projectile-trailblazer-mode
   "Rails trailblazer mode based on projectile-rails"
