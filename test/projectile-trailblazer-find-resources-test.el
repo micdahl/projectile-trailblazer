@@ -33,6 +33,17 @@
                  )
                 )
                )
+       (expect '("user/view/show" "user/view/edit" "user/view/new.html")
+               (with-mock
+                (stub projectile-rails-dir-files => '("/path/app/concepts/user/view/new.html.erb"
+                                                      "/path/app/concepts/user/view/edit.slim"
+                                                      "/path/app/concepts/user/view/show.haml")
+                      )
+                (projectile-rails-hash-keys
+                 (projectile-rails-choices `(("/path/app/concepts/" ,(concat "/app/concepts/\\(.+/view/.+\\)" projectile-rails-views-re))))
+                 )
+                )
+               )
        )
  )
 (provide 'projectile-trailblazer-find-resources-test)

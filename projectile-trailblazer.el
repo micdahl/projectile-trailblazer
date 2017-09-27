@@ -70,6 +70,13 @@
    "operation: "
    '(("app/concepts/" "/concepts/\\(.+/operation/.+\\)\\.rb$"))))
 
+(defun projectile-trailblazer-find-view ()
+  "Find a view."
+  (interactive)
+  (projectile-rails-find-resource
+   "view: "
+   `(("app/concepts/" ,(concat "/concepts/\\(.+/view/.+\\)" projectile-rails-views-re)))))
+
 ;;;###autoload
 (define-minor-mode projectile-trailblazer-mode
   "Rails trailblazer mode based on projectile-rails"
