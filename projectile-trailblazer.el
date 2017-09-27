@@ -49,6 +49,27 @@
   :prefix "projectile-trailblazer-"
   :group 'projectile)
 
+(defcustom projectile-trailblazer-keymap-prefix (kbd "C-c t")
+  "Keymap prefix for `projectile-trailblazer-mode'."
+  :group 'projectile-trailblazer
+  :type 'string)
+
+(defvar projectile-trailblazer-command-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "c") 'projectile-trailblazer-find-cell)
+    (define-key map (kbd "o") 'projectile-trailblazer-find-operation)
+    (define-key map (kbd "t") 'projectile-trailblazer-find-contract)
+    (define-key map (kbd "v") 'projectile-trailblazer-find-view)
+    map)
+  "Keymap after `projectile-trailblazer-keymap-prefix'.")
+(fset 'projectile-trailblazer-command-map projectile-trailblazer-command-map)
+
+(defvar projectile-trailblazer-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map projectile-trailblazer-keymap-prefix 'projectile-trailblazer-command-map)
+    map)
+  "Keymap for `projectile-trailblazer-mode'.")
+
 (defun projectile-trailblazer-find-cell ()
   "Find a cell."
   (interactive)
@@ -81,12 +102,8 @@
 (define-minor-mode projectile-trailblazer-mode
   "Rails trailblazer mode based on projectile-rails"
   :init-value nil
-  :lighter " Trailblazer"
-  (when projectile-trailblazer-mode
-    (and projectile-rails-expand-snippet (projectile-rails-expand-snippet-maybe))
-    (and projectile-rails-add-keywords (projectile-rails-add-keywords-for-file-type))
-    (projectile-rails-set-assets-dirs)
-    (projectile-rails-set-fixture-dirs)))
+  :lighter nil
+)
 
 ;;;###autoload
 (defun projectile-trailblazer-on ()

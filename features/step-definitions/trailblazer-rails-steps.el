@@ -27,6 +27,10 @@
       (lambda (filename)
         (should (string-match-p (s-lex-format "${filename}$") (buffer-file-name)))))
 
+(Then "^key \"\\(.+\\)\" should be mapped to \"\\(.+\\)\"$"
+      (lambda (key command)
+        (should (equal (key-binding (kbd key)) (intern command)))))
+
 (Then "^projectile-trailblazer should be turned on"
       (lambda ()
         (should projectile-trailblazer-mode)))
