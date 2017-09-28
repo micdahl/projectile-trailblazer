@@ -17,6 +17,7 @@ commands.
 ## Usage and customizing
 
 As **Projectile Trailblazer** heavily depends on it, usage and customizing is given at [Projectile Rails](https://github.com/asok/projectile-rails#usage).
+To use the package as a global mode use `(projectile-trailblazer-global-mode)`
 
 ## Added interactive commands
 
