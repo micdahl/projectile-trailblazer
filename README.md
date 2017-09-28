@@ -44,28 +44,28 @@ Additional to the [commands defined by Projectile Rails](https://github.com/asok
 <tbody>
 <tr>
 <td class="left">projectile-trailblazer-find-cell</td>
-<td class="left"><kbd>C-c t c</kbd></td>
+<td class="left"><kbd>C-c ; c</kbd></td>
 <td class="left">Find a cell using `projectile-completion-system`</td>
 </tr>
 
 
 <tr>
 <td class="left">projectile-trailblazer-find-contract</td>
-<td class="left"><kbd>C-c t t</kbd></td>
+<td class="left"><kbd>C-c ; t</kbd></td>
 <td class="left">Find a contract using `projectile-completion-system`</td>
 </tr>
 
 
 <tr>
 <td class="left">projectile-trailblazer-find-operation</td>
-<td class="left"><kbd>C-c t o</kbd></td>
+<td class="left"><kbd>C-c ; o</kbd></td>
 <td class="left">Find an operation using `projectile-completion-system`</td>
 </tr>
 
 
 <tr>
 <td class="left">projectile-trailblazer-find-view</td>
-<td class="left"><kbd>C-c t v</kbd></td>
+<td class="left"><kbd>C-c ; v</kbd></td>
 <td class="left">Find an view using `projectile-completion-system`</td>
 </tr>
 </tbody>

@@ -49,7 +49,7 @@
   :prefix "projectile-trailblazer-"
   :group 'projectile)
 
-(defcustom projectile-trailblazer-keymap-prefix (kbd "C-c t")
+(defcustom projectile-trailblazer-keymap-prefix (kbd "C-c ;")
   "Keymap prefix for `projectile-trailblazer-mode'."
   :group 'projectile-trailblazer
   :type 'string)
@@ -106,6 +106,11 @@
 )
 
 ;;;###autoload
+(define-globalized-minor-mode projectile-trailblazer-global-mode
+  projectile-trailblazer-mode
+  projectile-trailblazer-on)
+
+;;;###autoload
 (defun projectile-trailblazer-on ()
   "Enable `projectile-trailblazer-mode' minor mode if this is a rails project."
   (when (and
@@ -113,12 +118,6 @@
          (not (projectile-rails--ignore-buffer-p))
          (projectile-rails-root))
     (projectile-trailblazer-mode +1)))
-
-;;;###autoload
-(define-globalized-minor-mode projectile-trailblazer-global-mode
-  :require 'projectile-trailblazer
-  projectile-trailblazer-mode
-  projectile-trailblazer-on)
 
 (defun projectile-trailblazer-off ()
   "Disable `projectile-rails-mode' minor mode."
