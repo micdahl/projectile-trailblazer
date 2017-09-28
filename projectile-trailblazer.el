@@ -50,7 +50,7 @@
   :group 'projectile)
 
 (defcustom projectile-trailblazer-keymap-prefix (kbd "C-c ;")
-  "Keymap prefix for `projectile-trailblazer-mode'."
+  "Keymap prefix for option ‘projectile-trailblazer-mode’."
   :group 'projectile-trailblazer
   :type 'string)
 
@@ -68,7 +68,7 @@
   (let ((map (make-sparse-keymap)))
     (define-key map projectile-trailblazer-keymap-prefix 'projectile-trailblazer-command-map)
     map)
-  "Keymap for `projectile-trailblazer-mode'.")
+  "Keymap for option ‘projectile-trailblazer-mode’.")
 
 (defun projectile-trailblazer-find-cell ()
   "Find a cell."
@@ -112,7 +112,7 @@
 
 ;;;###autoload
 (defun projectile-trailblazer-on ()
-  "Enable `projectile-trailblazer-mode' minor mode if this is a rails project."
+  "Enable variable `projectile-trailblazer-mode' if this is a rails project."
   (when (and
          (projectile-project-p)
          (not (projectile-rails--ignore-buffer-p))
@@ -120,7 +120,7 @@
     (projectile-trailblazer-mode +1)))
 
 (defun projectile-trailblazer-off ()
-  "Disable `projectile-rails-mode' minor mode."
+  "Disable variable `projectile-trailblazer-mode' minor mode."
   (projectile-trailblazer-mode -1))
 
 (provide 'projectile-trailblazer)
