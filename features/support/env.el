@@ -124,5 +124,4 @@
 (After "@finding-fixtures"
        (delete-fixture-files))
 
-(provide 'env)
 ;;; env ends here
