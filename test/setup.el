@@ -13,5 +13,4 @@
   (load test-file nil t))
 
 (ert-run-tests-batch-and-exit t)
-(provide 'setup)
 ;;; setup.el ends here
